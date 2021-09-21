@@ -1,55 +1,55 @@
-# With env From next.config.js
+# С env Из next.config.js
 
-This example demonstrates setting parameters that will be used by your application and set at build time (not run time).
-More specifically, what that means, is that environmental variables are programmed into the special configuration file `next.config.js` and then
-returned to your react components when the program is built with `next build`.
+Этот пример демонстрирует установку параметров, которые будут использоваться вашим приложением и устанавливаться во время сборки (не во время выполнения).
+Более конкретно, это означает, что переменные среды программируются в специальный конфигурационный файл `next.config.js` и затем
+возвращается в ваши компоненты react, когда программа собирается с помощью `next build`.
 
-As the build process (`next build`) is proceeding, `next.config.js` is processed and passed in as a parameter is the variable `phase`.
-`phase` can have the values `PHASE_DEVELOPMENT_SERVER` or `PHASE_PRODUCTION_BUILD` (as defined in `next\constants`). Based on the variable
-`phase`, different environmental variables can be set for use in your react app. That is, if you reference `process.env.RESTURL_SPEAKERS`
-in your react app, whatever is returned by `next.config.js` as the variable `env`, (or `env.RESTURL_SPEAKERS`) will be accessible in your
-app as `process.env.RESTURL_SPEAKERS`.
+По мере выполнения процесса сборки (`next build`) обрабатывается файл `next.config.js`, который передается в качестве параметра в переменную `phase`.
+`phase` может иметь значения `PHASE_DEVELOPMENT_SERVER` или `PHASE_PRODUCTION_BUILD` (как определено в `next\constants`). На основе переменной
+`phase`, различные переменные окружения могут быть установлены для использования в вашем приложении react. То есть, если вы ссылаетесь на `process.env.RESTURL_SPEAKERS`.
+в вашем приложении react, все, что возвращается `next.config.js` в качестве переменной `env`, (или `env.RESTURL_SPEAKERS`) будет доступно в вашем
+app как `process.env.RESTURL_SPEAKERS`.
 
-View the docs on [`next.config.js`](https://nextjs.org/docs/api-reference/next.config.js/introduction) for more information.
+Для получения дополнительной информации просмотрите документацию по [`next.config.js`](https://nextjs.org/docs/api-reference/next.config.js/introduction).
 
-## Preview
+## Предварительный просмотр
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Предварительный просмотр примера в прямом эфире на [StackBlitz](http://stackblitz.com/):
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-env-from-next-config-js)
+[![Открыть в StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-env-from-next-config-js)
 
-## Deploy your own
+## Разверните свой собственный
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Разверните пример, используя [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-env-from-next-config-js&project-name=with-env-from-next-config-js&repository-name=with-env-from-next-config-js)
+[![Развернуть с Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-env-from-next-config-js&project-name=with-env-from-next-config-js&repository-name=with-env-from-next-config-js)
 
-## How to use
+## Как использовать
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Выполните [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) с [npm](https://docs.npmjs.com/cli/init) или [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) для загрузки примера:
 
 ```bash
 npx create-next-app --example with-env-from-next-config-js with-env-from-next-config-js-app
-# or
+# или
 yarn create next-app --example with-env-from-next-config-js with-env-from-next-config-js-app
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Разверните его в облаке с помощью [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-> ## Special note
+> ## Особое примечание
 >
-> `next build` does a hard coded variable substitution into your JavaScript before the final bundle is created. This means
-> that if you change your environmental variables outside of your running app, such as in windows with `set` or linux with `setenv`
-> those changes will not be reflected in your running application until a build happens again (with `next build`).
+> `next build` выполняет жесткую подстановку переменных в ваш JavaScript перед созданием финального пакета. Это означает
+> что если вы изменяете переменные окружения вне запущенного приложения, например, в windows с помощью `set` или в linux с помощью `setenv`.
+> эти изменения не будут отражены в вашем работающем приложении, пока сборка не произойдет снова (с `next build`).
 
-## Discussion regarding this example
+## Обсуждение данного примера
 
-This example is not meant to be a reference standard for how to do development, staging and
-production builds with Next. This is just one possible scenario that could be used if you want the
-following behavior while you are doing development.
+Этот пример не является эталоном того, как следует выполнять разработку, постановку и
+производственные сборки с Next. Это лишь один из возможных сценариев, который можно использовать, если вы хотите, чтобы
+следующее поведение во время разработки.
 
-- When your run `next dev` or `npm run dev`, you will always use the environmental variables assigned when `isDev` is true in the example.
-- When you run `next build` then `next start`, assuming you set externally the environmental variable STAGING to anything but 1, you will get the results assuming `isProd` is true.
-- When your run `next build` or `npm run build` in production, if the environmental variable `STAGING` is set to `1`, `isStaging` will be set and you will get those values returned.
+- Когда вы запускаете `next dev` или `npm run dev`, вы всегда будете использовать переменные окружения, назначенные, когда `isDev` имеет значение true в примере.
+- Когда вы запустите `next build`, а затем `next start`, при условии, что вы установили внешнюю переменную окружения STAGING в любое значение, кроме 1, вы получите результаты, предполагающие, что `isProd` истинен.
+- Когда вы запускаете `next build` или `npm run build` в production, если переменная окружения `STAGING` установлена в `1`, `isStaging` будет установлена, и вы получите эти значения обратно.
 
-You can read more about this feature in this blog post <a href="https://vercel.com/blog/next5-1" target="_blank">Next.js 5.1: Faster Page Resolution, Environment Config and More</a> (under Environment Config).
+Подробнее об этой функции вы можете прочитать в этой записи блога <a href="https://vercel.com/blog/next5-1" target="_blank">Next.js 5.1: Ускоренное разрешение страницы, настройка среды и многое другое</a> (в разделе Настройка среды).
