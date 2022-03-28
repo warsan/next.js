@@ -1,4 +1,4 @@
-# С env Из next.config.js
+# Из env в next.config.js
 
 Этот пример демонстрирует установку параметров, которые будут использоваться вашим приложением и устанавливаться во время сборки (не во время выполнения).
 Более конкретно, это означает, что переменные среды программируются в специальный конфигурационный файл `next.config.js` и затем
@@ -16,7 +16,15 @@ app как `process.env.RESTURL_SPEAKERS`.
 
 Предварительный просмотр примера в прямом эфире на [StackBlitz](http://stackblitz.com/):
 
-[![Открыть в StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-env-from-next-config-js)
+[![Открыть в StackBlitz](https://github.com/warsan/next.js/blob/master/examples/buttons/index.html)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-env-from-next-config-js)
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="162" height="32" viewBox="0 0 162 32" fill="none">
+<rect width="162" height="32" rx="4" fill="#1374EF"/>
+<rect x="32" width="1" height="32" fill="#1269D3"/>
+<path d="M10 17.5882H15.1651L12.1269 25L22 14.4118H16.8349L19.8731 7L10 17.5882Z" fill="white"/>
+</svg>
+```
 
 ## Разверните свой собственный
 
